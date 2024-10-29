@@ -5,35 +5,31 @@ import { FiShoppingCart, FiHeart, FiShare2, FiEye } from "react-icons/fi";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { FaStar } from "react-icons/fa";
 
-const ProductDesign = () => {
+const ProductItem = () => {
   return (
-    <div className="w-1/4 mt-8 relative group">
-      {/* Product Image with "New Arrival" Label */}
+    <div className="mt-8 relative group mx-3 cursor-pointer">
       <div className="relative">
-        {/* New Arrival Label */}
-        <span className="absolute top-3 left-3 bg-primary  text-md font-bold px-3 py-2 rounded">
+        <button className="absolute top-3 left-3 bg-primary z-10  text-md font-bold px-3 py-1 rounded">
           New Arrival
-        </span>
-
+        </button>
         <Image className="w-full" src={ProductImg} alt="Product" />
 
         {/* Hover Icons */}
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-25 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-   
-          <button className="absolute bottom-[120px] right-3 p-2 bg-white border rounded-full shadow-md hover:bg-gray-100 transition-colors">
+          <div className="group absolute bottom-[120px] right-3 p-2 bg-white ring-1 rounded shadow-md hover:bg-gray-100 transition-colors">
             <FiEye className="text-gray-700" />
-          </button>
-          <p className="absolute bottom-[120px] right-14 px-3 py-1 bg-black text-white text-sm rounded opacity-0">Quick View</p>
+            {/* <p className="group-hover:opacity-5 absolute bottom-[120px] right-14 px-3 py-1 bg-black text-white text-sm rounded z-30">Quick View</p> */}
+          </div>
 
-          <button className="absolute bottom-16 right-3 p-2 bg-white border rounded-full shadow-md hover:bg-gray-100 transition-colors">
+          <div className="absolute bottom-16 right-3 p-2 bg-white border rounded shadow-md hover:bg-gray-100 transition-colors">
             <FiHeart className="text-gray-700" />
-          </button>
-          <p className="absolute bottom-16 right-14 px-3 py-1 bg-black text-white text-sm rounded opacity-0">Wishlist</p>
+          </div>
+          {/* <p className="absolute bottom-16 right-14 px-3 py-1 bg-black text-white text-sm rounded opacity-0">Wishlist</p> */}
           
-          <button className="absolute bottom-3 right-3 p-2 bg-white border rounded-full shadow-md hover:bg-gray-100 transition-colors hover:opacity-1">
+          <div className=" absolute bottom-3 right-3 p-2 bg-white border rounded shadow-md hover:bg-gray-100 transition-colors hover:opacity-1">
             <FiShare2 className="text-gray-700" />
-          </button>
-          <p className="absolute bottom-3 right-14 px-3 py-1 bg-black text-white text-sm rounded opacity-0">Share</p>
+          <p className=" hover:translate-x-7 group-hover:opacity-100 absolute bottom-0 right-0 opacity-0 px-3 py-1 bg-black text-white text-sm rounded">Share</p>
+          </div>
 
         </div>
       </div>
@@ -75,4 +71,4 @@ const ProductDesign = () => {
   );
 }
 
-export default ProductDesign;
+export default ProductItem;

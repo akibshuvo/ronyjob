@@ -5,8 +5,8 @@ import Paragraph from '../Paragraph'
 const NavigateMenu = () => {
   return (
     <section className='py-7 bg-[#F1F4F0]'>
-        <div className="container mx-auto">
-            <div className='flex items-center justify-center'>
+        <div className="container mx-auto px-2">
+            <div className='flex items-center justify-between  lg:justify-center'>
                 <div className='flex items-center gap-3 text-text_primary'>
                     <Paragraph className='font-semibold cursor-pointer hover:text-black duration-100' text='Home'/>
                     <LiaAngleRightSolid/>
@@ -16,7 +16,7 @@ const NavigateMenu = () => {
                     <LiaAngleRightSolid/>
                     <Paragraph className='font-semibold cursor-pointer hover:text-black duration-100' text='Winter'/>
                     <LiaAngleRightSolid/>
-                    <Paragraph className='font-semibold cursor-pointer' text='Charms charisma heavy winter full sleeve jacket with hoodie for women'/>
+                    <Paragraph className='hidden md:block font-semibold cursor-pointer' text='Charms charisma heavy winter full sleeve jacket with hoodie for women'/>
                 </div>
             </div>
         </div>
